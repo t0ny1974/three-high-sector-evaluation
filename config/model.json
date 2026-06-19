@@ -1,0 +1,22 @@
+{
+  "model_version": "0.1.0",
+  "investment_horizon": "3-12 months",
+  "quality_weights": {
+    "growth": 0.35,
+    "profit": 0.30,
+    "moat": 0.35
+  },
+  "status_thresholds": {
+    "high_quality": 70,
+    "normal_quality": 55,
+    "expensive": 70,
+    "extremely_expensive": 85,
+    "market_confirmed": 55,
+    "market_weak": 45,
+    "minimum_confidence": 60
+  },
+  "display": {
+    "bubble_min": 18,
+    "bubble_max": 70
+  }
+}

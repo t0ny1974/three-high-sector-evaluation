@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>三高产业链板块评估模型</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">A股 · AI算力产业链 · 3至12个月</p>
+        <h1>三高产业链板块评估模型</h1>
+        <p class="subtitle">产业质量与交易条件分层观察，不输出个股买卖建议。</p>
+      </div>
+      <div class="version" id="version">模型加载中</div>
+    </header>
+
+    <main>
+      <div class="notice" id="notice">当前页面使用合成演示数据，仅用于验证模型和界面。</div>
+
+      <section class="metrics" aria-label="模型概览">
+        <article><span>正式排名板块</span><strong id="ranked-count">-</strong></article>
+        <article><span>观察板块</span><strong id="observation-count">-</strong></article>
+        <article><span>重点研究</span><strong id="research-count">-</strong></article>
+        <article><span>演示最高质量分</span><strong id="top-quality">-</strong></article>
+      </section>
+
+      <section class="panel controls" aria-label="筛选条件">
+        <label><input id="show-observation" type="checkbox" checked> 显示下游观察板块</label>
+        <label>产业链层级
+          <select id="layer-filter">
+            <option value="全部">全部</option>
+            <option value="上游">上游</option>
+            <option value="中游">中游</option>
+            <option value="下游">下游</option>
+          </select>
+        </label>
+        <label>最低置信度
+          <input id="confidence-filter" type="range" min="0" max="100" step="5" value="0">
+          <output id="confidence-output">0</output>
+        </label>
+        <button id="export-button" type="button">导出当前CSV</button>
+      </section>
+
+      <section class="panel chart-panel">
+        <div class="section-heading">
+          <div>
+            <h2>产业链气泡图</h2>
+            <p>横轴：围墙分 · 纵轴：利润分 · 气泡大小：增长分</p>
+          </div>
+          <div class="legend">
+            <span><i class="upstream"></i>上游</span>
+            <span><i class="midstream"></i>中游</span>
+            <span><i class="downstream"></i>下游观察</span>
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <svg id="bubble-chart" viewBox="0 0 1100 650" role="img" aria-label="产业链板块气泡图"></svg>
+          <div class="tooltip" id="tooltip" hidden></div>
+        </div>
+      </section>
+
+      <section class="panel table-panel">
+        <div class="section-heading">
+          <div>
+            <h2>板块评分明细</h2>
+            <p>悬浮气泡查看完整五维数据。</p>
+          </div>
+        </div>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>板块</th><th>层级</th><th>增长</th><th>利润</th><th>围墙</th>
+                <th>产业质量</th><th>估值温度</th><th>市场状态</th><th>置信度</th><th>研究状态</th>
+              </tr>
+            </thead>
+            <tbody id="score-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="method">
+        <h2>方法边界</h2>
+        <ul>
+          <li>产业质量分 = 增长35% + 利润30% + 围墙35%。</li>
+          <li>估值温度与市场状态不进入产业质量分。</li>
+          <li>下游板块只观察，不参与正式排名。</li>
+          <li>当前数据全部为合成演示数据；真实结果必须可追溯。</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "universe": "A-share AI computing industry chain",
+  "sectors": [
+    {"id": "ai-accelerators", "name": "AI芯片与加速器", "layer": "上游", "ranked": true},
+    {"id": "memory-hbm", "name": "存储芯片及HBM产业链", "layer": "上游", "ranked": true},
+    {"id": "optical", "name": "光模块与光器件", "layer": "上游", "ranked": true},
+    {"id": "ccl", "name": "高速高频CCL", "layer": "上游", "ranked": true},
+    {"id": "pcb", "name": "高多层PCB", "layer": "上游", "ranked": true},
+    {"id": "advanced-packaging", "name": "先进封装", "layer": "上游", "ranked": true},
+    {"id": "semi-equipment-materials", "name": "半导体设备与关键材料", "layer": "上游", "ranked": true},
+    {"id": "data-center-power", "name": "数据中心电源", "layer": "上游", "ranked": true},
+    {"id": "liquid-cooling", "name": "液冷与散热", "layer": "上游", "ranked": true},
+    {"id": "connectors-passives", "name": "高速连接器与被动元件", "layer": "上游", "ranked": true},
+    {"id": "ai-servers", "name": "AI服务器与整机", "layer": "中游", "ranked": true},
+    {"id": "networking", "name": "交换机与高速网络设备", "layer": "中游", "ranked": true},
+    {"id": "idc", "name": "IDC与数据中心", "layer": "中游", "ranked": true},
+    {"id": "compute-rental", "name": "算力租赁与云服务", "layer": "中游", "ranked": true},
+    {"id": "grid-infrastructure", "name": "电网与算力配套基础设施", "layer": "中游", "ranked": true},
+    {"id": "foundation-models", "name": "大模型与AI软件", "layer": "下游", "ranked": false},
+    {"id": "ai-terminals", "name": "AI应用与智能终端", "layer": "下游", "ranked": false},
+    {"id": "vertical-ai", "name": "行业AI解决方案", "layer": "下游", "ranked": false}
+  ]
+}
