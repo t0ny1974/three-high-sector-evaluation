@@ -37,7 +37,8 @@
 需要 Python 3.11 或更高版本。
 
 ```powershell
-cd C:\LifeOS\projects\three-high-sector-evaluation
+git clone https://github.com/<github-user>/three-high-sector-evaluation.git
+cd three-high-sector-evaluation
 python server.py
 ```
 
